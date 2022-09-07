@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.HeaderDT {
+  display: flex;
+  justify-content: space-between;
+  // align-items: center;
+}
+.Logo {
+  color: #fb4226 !important;
+  font-weight: 600;
+  font-size: 22px;
+  cursor: pointer;
+}
+.Navbar {
+  display: flex;
+  list-style: none;
+
+  @media screen and (max-width: 992px) {
+    display: none;
+  }
+  span {
+    font-weight: 500;
+    padding: 0 20px;
+    color: #fff;
+    font-size: 16px;
+    transition: all 0.5s;
+    cursor: pointer;
+    &:hover {
+      color: #fb4226;
+    }
+  }
+}
+
+.user {
+  @media screen and (max-width: 992px) {
+    display: none;
+  }
+  .Auth {
+    display: flex;
+    width: 200px;
+    justify-content: flex-end;
+    .authItem {
+      display: flex;
+      align-items: center;
+      margin-left: 20px;
+      .Avatar {
+        background: #fb4226;
+        text-align: center;
+        line-height: 23px;
+        margin-right: 5px;
+      }
+      span {
+        color: #fff;
+        font-size: 16px;
+        font-weight: 500;
+        transition: all 0.5s;
+        &:hover {
+          color: #fb4226;
+        }
+      }
+    }
+  }
+}
+
+// mobile
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: -111;
+  @media screen and (max-width: 992px) {
+    display: block;
+  }
+}
+.iconBar {
+  color: red;
+  font-size: 30px;
+  line-height: 55px;
+  font-weight: 700;
+  display: none;
+  cursor: pointer;
+  @media screen and (max-width: 992px) {
+    display: block;
+    position: relative;
+  }
+}
+.userMB,
+.NavbarMB {
+  display: none;
+}
+
+@media screen and (max-width: 992px) {
+  .HeaderMB {
+    display: flex;
+    flex-direction: column-reverse;
+    position: absolute;
+    left: 0;
+    top: 0;
+    align-items: flex-start;
+    padding: 20px;
+    height: 100vh;
+    background: #fff;
+    width: 200px;
+    transition: left 0.5s;
+    .NavbarMB {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      height: 100vh;
+      background: #fff;
+      right: 0;
+      cursor: pointer;
+      span {
+        font-weight: 500;
+        color: #fff;
+        font-size: 16px;
+        &:hover {
+          color: #fb4226;
+        }
+      }
+    }
+
+    .userMB {
+      display: block;
+      cursor: pointer;
+      .Auth {
+        .authItem {
+          display: flex;
+          align-items: center;
+          // width: 200px;
+
+          .Avatar {
+            background: #fb4226;
+            text-align: center;
+            line-height: 23px;
+            margin-right: 5px;
+          }
+          span {
+            color: #9e9e9e;
+            font-size: 16px;
+            font-weight: 500;
+            &:hover {
+              color: #fb4226;
+            }
+          }
+        }
+      }
+    }
+  }
+}
